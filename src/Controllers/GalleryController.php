@@ -6,7 +6,7 @@ class GalleryController
 {
     public function index()
     {
-        return 'Hello from GalleryController';
+        return 'Hello from GalleryController method index';
     }
 
     public function test()

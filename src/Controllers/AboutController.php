@@ -6,12 +6,12 @@ class AboutController
 {
     public function index()
     {
-        return 'Hello from AboutController';
+        return 'Hello from AboutController method index';
     }
 
     public function about()
     {
-        return 'I am function from AboutController';
+        return 'I am function about from AboutController';
     }
 
 }

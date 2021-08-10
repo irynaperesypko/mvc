@@ -6,7 +6,7 @@ class IndexController
 {
     public function index()
     {
-        return 'Hello from IndexController';
+        return 'I am function index from IndexController ';
     }
 
     public function first()
