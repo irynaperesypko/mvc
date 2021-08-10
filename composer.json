@@ -1,0 +1,16 @@
+{
+    "name": "peresypkoua/best-project",
+    "description": "first mvc",
+    "authors": [
+        {
+            "name": "ira",
+            "email": "ira@mail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ira\\": "src"
+        }
+    }
+}
