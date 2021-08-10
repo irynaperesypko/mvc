@@ -8,4 +8,9 @@ class IndexController
     {
         return 'Hello from IndexController';
     }
+
+    public function first()
+    {
+        return 'I am function first from IndexController';
+    }
 }

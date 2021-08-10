@@ -9,4 +9,9 @@ class GalleryController
         return 'Hello from GalleryController';
     }
 
+    public function test()
+    {
+        return 'I am function test from GalleryController';
+    }
+
 }
