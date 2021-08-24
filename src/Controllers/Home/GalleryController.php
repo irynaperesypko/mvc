@@ -1,10 +1,10 @@
 <?php
 
-namespace Ira\Controllers;
+namespace Ira\Controllers\Home;
 
 use Ira\View\View;
 
-class ErrorController
+class GalleryController
 {
     private $view;
 
@@ -14,6 +14,7 @@ class ErrorController
 
     public function index()
     {
-        $this->view->render('404');
+        $this->view->render('gallery');
     }
+
 }

@@ -2,21 +2,22 @@
 
 namespace Ira;
 
+use function Couchbase\defaultDecoder;
+
 class Router
 {
-    private $controller = 'ErrorController';
-    private $action= 'index';
+    private $controller = 'IndexController';
+    private $action = 'index';
 
     public function __construct(string $url)
     {
-        $routes= explode('/', $url);
+        $routes = explode('/', $url);
         // получаем имя контроллера
-        if (!empty($routes[1]) )
-        {
-            $this->controller = ucfirst($routes[1])."Controller";
+        if (!empty($routes[1])) {
+            $this->controller = ucfirst($routes[1]) . "Controller";
         }
         // получаем имя экшена
-        if (!empty($routes[2]) ) {
+        if (!empty($routes[2])) {
             $this->action = $routes[2];
         }
     }
@@ -26,7 +27,8 @@ class Router
      */
     public function getController(): string
     {
-        return 'Ira\\Controllers\\'.$this->controller;
+        $admin = $this->checkAdmin();
+        return 'Ira\\Controllers\\' . $admin . '\\' . $this->controller;
     }
 
     /**
@@ -37,6 +39,10 @@ class Router
         return $this->action;
     }
 
+    private function checkAdmin(): string
+    {
+        return stristr($this->controller, 'admin') ? 'Admin' : 'Home';
+    }
 
 
 }
