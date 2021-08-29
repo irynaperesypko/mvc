@@ -7,7 +7,9 @@
             "email": "ira@mail.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-pdo": "*"
+    },
     "autoload": {
         "psr-4": {
             "Ira\\": "src"

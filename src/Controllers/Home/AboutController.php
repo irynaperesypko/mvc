@@ -2,19 +2,24 @@
 
 namespace Ira\Controllers\Home;
 
+use Ira\Models\About;
 use Ira\View\View;
 
 class AboutController
 {
     private $view;
+    private $model;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->view = new View();
+        $this->model = new About();
     }
 
     public function index()
     {
-        $this->view->render('about');
+        $data=$this->model->getAllArray();
+        $this->view->render('about', ['data' => $data]);
     }
 
 }

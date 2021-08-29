@@ -29,6 +29,7 @@ class View
     // вывести отрендеренный в переменную $content layout-а
     // шаблон с параметрами $params
     function render($template, $params = array()){
+
         echo $this->fetch($template, $params);
     }
 

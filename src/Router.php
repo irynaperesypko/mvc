@@ -6,11 +6,12 @@ use function Couchbase\defaultDecoder;
 
 class Router
 {
-    private $controller = 'IndexController';
+    private $controller = 'AboutController';
     private $action = 'index';
 
     public function __construct(string $url)
     {
+
         $routes = explode('/', $url);
         // получаем имя контроллера
         if (!empty($routes[1])) {
