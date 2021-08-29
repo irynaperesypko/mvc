@@ -2,8 +2,9 @@
 
 namespace Ira\Models;
 
-class About
+class About extends Model
 {
+    private $tableName = 'abouts';
     private $arr = [
         'one' => 'number1',
         'two' => 'number2',
@@ -21,5 +22,10 @@ class About
     public function getItemFromArray($key): array
     {
         return [$this->arr[$key]];
+    }
+
+    public function getAll()
+    {
+        return $this->all($this->tableName);
     }
 }

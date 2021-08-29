@@ -2,8 +2,9 @@
 
 namespace Ira\Models;
 
-class Gallery
+class Gallery extends Model
 {
+    private $tableName = 'galleries';
     private $arr = [
         'one' => 'number1',
         'two' => 'number2',
@@ -18,8 +19,13 @@ class Gallery
         return $this->arr;
     }
 
-    public function getItemFromArray($key):array
+    public function getItemFromArray($key): array
     {
         return [$this->arr[$key]];
+    }
+
+    public function getAll()
+    {
+        return $this->all($this->tableName);
     }
 }

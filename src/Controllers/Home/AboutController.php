@@ -18,8 +18,14 @@ class AboutController
 
     public function index()
     {
-        $data=$this->model->getAllArray();
+        $data = $this->model->getAllArray();
         $this->view->render('about', ['data' => $data]);
     }
 
+    public function getAll()
+    {
+        $data = $this->model->getAll();
+        $this->view->render('aboutList', ['data' => $data]);
+
+    }
 }

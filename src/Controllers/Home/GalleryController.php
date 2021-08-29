@@ -22,4 +22,11 @@ class GalleryController
         $this->view->render('gallery', ['data' => $data]);
     }
 
+    public function getAll()
+    {
+        $data = $this->model->getAll();
+        $this->view->render('galleryList', ['data' => $data]);
+
+    }
+
 }
