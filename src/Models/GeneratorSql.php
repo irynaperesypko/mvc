@@ -63,5 +63,5 @@ class GeneratorSql
     }
 }
 
-$obj = new GeneratorSql('SELECT', 'hillel', ['one', 'two'], null, null, null, true, 'id', 5,3);
+$obj = new GeneratorSql('SELECT', 'hillel', ['one', 'two']);
 print  $obj->getSql();
